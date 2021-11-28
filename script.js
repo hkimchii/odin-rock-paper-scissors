@@ -10,25 +10,25 @@ function game() {
 
   // running of a round
   function playRound() {
-    let playerSelection = prompt("Choose your move").toLowerCase();
+    let playerSelection = prompt("Choose your move").toUpperCase();
     let computerSelection = computerPlay();
 
     if (playerSelection === computerSelection) {
       return (
         playerSelection + " against " + computerSelection + "! It's a tie!"
       );
-    } else if (playerSelection == "rock" && computerSelection == "paper") {
-      return "Rock against Paper! You lose!";
-    } else if (playerSelection == "rock" && computerSelection == "scissors") {
-      return "Rock against Scissors! You win!";
-    } else if (playerSelection == "paper" && computerSelection == "rock") {
-      return "Paper against Rock! You win!";
-    } else if (playerSelection == "paper" && computerSelection == "scissors") {
-      return "Paper against Scissors! You lose!";
-    } else if (playerSelection == "scissors" && computerSelection == "rock") {
-      return "Scissors against Rock! You lose!";
+    } else if (playerSelection == "ROCK" && computerSelection == "PAPER") {
+      return "ROCK against PAPER! You lose!";
+    } else if (playerSelection == "ROCK" && computerSelection == "SCISSORS") {
+      return "ROCK against SCISSORS! You win!";
+    } else if (playerSelection == "PAPER" && computerSelection == "ROCK") {
+      return "PAPER against ROCK! You win!";
+    } else if (playerSelection == "PAPER" && computerSelection == "SCISSORS") {
+      return "PAPER against SCISSORS! You lose!";
+    } else if (playerSelection == "SCISSORS" && computerSelection == "ROCK") {
+      return "SCISSORS against ROCK! You lose!";
     } else {
-      return "Scissors against Paper! You win!";
+      return "SCISSORS against PAPER! You win!";
     }
   }
 
